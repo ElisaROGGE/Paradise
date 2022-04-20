@@ -32,7 +32,8 @@ class Reservation{
     function location(){
         header('location:/reservation');
     }
-    
+
+
     function checkuser($email){
         $this->stmt = $this->mysqli->prepare("SELECT `email` FROM `reservation_form` WHERE `email`=?");
         $this->stmt->bind_param("s", $email);

@@ -10,7 +10,8 @@ $depart = "";
 $retour = "";
 $verify =false;
 $Err ='';
-// "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{3,30}$/";
+
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
         $res = new Reservation();
 // Vérification du nom
@@ -40,12 +41,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $Err = "Veuillez saisir un numéro de téléphone valide.";
         }
     }
+    // Vérification de l'adresse
     if(empty($_POST["adresse"])){
         $Err = "Veuillez saisir une adresse.";
     }else{
         $adresse = ($_POST["adresse"]);
     }
-
+// Vérification du nombre de personnes
     if(empty($_POST["personnes"])){
         $Err = "Veuillez inscrire le nombre de voyageurs.";
     }else{
@@ -56,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $Err = "Vous devez inscrire au moins un voyageur";
         }
     }
-
+// Vérification de la date d'arrivée et de retour
     if(empty($_POST["depart"])){
         $Err = "Veuillez saisir une date de départ";
     }else{
@@ -77,8 +79,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $Err = 'Vous avez saisi une date antérieure à aujourdhui.';
         }
     }
-    
-
+    if($depart == $retour){
+        $Err = "Vous ne pouvez pas choisir la même date de départ";
+    }
     if($Err == ''){ 
         $verify = true;
     }

@@ -7,7 +7,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $reserv = new Reservation();
         $reserv->query();
         }
-        $message = empty($Err)? "<span class='bravo'>Merci pour votre réservation !</span>":"<span class='error'>$Err</span>";
+        $message = empty($Err)? "<span class='bravo'>Merci pour votre réservation !</span>"
+        :"<span class='error'>$Err</span>";
     }  
 ?>
 
