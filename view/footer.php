@@ -1,5 +1,5 @@
 <!-- Footer -->
-<section class="footer">
+<footer>
     <div class="box-container">
         <div class="box">
             <h3>Liens rapides</h3>
@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="credit">Site créé par <span>Elisa Rogge</span></div>
-</section>
+</footer>
 <!-- Fin footer -->
 
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

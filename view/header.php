@@ -13,7 +13,7 @@
 <body>
     
     <!-- Header -->
-<section class="header">
+<header>
     <a href="/" class="logo">Paradise</a>
     <nav class="navbar">
         <a href="/">Accueil</a>
@@ -24,5 +24,5 @@
 
     <div id="menu-btn" class="fas fa-bars"></div>
 
-</section>
+</header>
 </html>

@@ -38,7 +38,7 @@ html::-webkit-scrollbar-thumb{
     background-color: var(--main-color);
 }
 
-section{
+section, header, footer{
     padding: 5rem 10%;
 }
 
@@ -86,7 +86,7 @@ section{
     color: var(--black);
 }
 /* Header */
-.header{
+header{
     position: sticky;
     top: 0;
     left: 0;
@@ -101,17 +101,17 @@ section{
     justify-content: space-between;
 }
 
-.header .logo{
+header .logo{
     font-size: 2.5rem;
     color: var(--black);
 }
 
-.header .navbar a{
+header .navbar a{
     font-size: 2rem;
     margin-left: 2rem;
     color: var(--black);
 }
-.header .navbar a:hover{
+header .navbar a:hover{
     color: var(--main-color);
 }
 
@@ -369,7 +369,7 @@ section.book-now{
 
 /* Page Formules */
 .packages{
-    background: var(--light-bg);
+    background: var(--white);
 }
 .packages .box-container{
     display: grid;
@@ -480,38 +480,38 @@ section.book-now{
 
 
 /* Footer */
-.footer{
+footer{
     background: url(../images/footer-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
-.footer .box-container{
+footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 3rem;
 }
 
-.footer .box-container .box h3{
+footer .box-container .box h3{
     color: var(--white);
     font-size: 2.5rem;
     padding-bottom: 2rem;
 }
-.footer .box-container .box a{
+footer .box-container .box a{
     color: var(--light-white);
     font-size: 1.5rem;
     padding-bottom: 1.5rem;
     display: block;
     text-transform: none;
 }
-.footer .box-container .box a i{
+footer .box-container .box a i{
     color: var(--main-color);
     padding-right: 0.5rem;
     transition: all 0.2s linear;
 }
-.footer .box-container .box a:hover i{
+footer .box-container .box a:hover i{
     padding-right: 2rem;
 }
-.footer .credit{
+footer .credit{
     text-align: center;
     padding-top: 3rem;
     margin-top: 3rem;
@@ -519,7 +519,7 @@ section.book-now{
     font-size: 2rem;
     color: var(--white);
 }
-.footer .credit span{
+footer .credit span{
     color: var(--main-color);
 }
 
@@ -563,7 +563,7 @@ section.book-now{
     #menu-btn.fa-times{
         transform: rotate(180deg);
     }
-    .header .navbar{
+    header .navbar{
         position: absolute;
         top: 99%;
         right: 0;
@@ -574,10 +574,11 @@ section.book-now{
         transition: 0.2s linear;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
     }
-    .header .navbar.active{
+    header .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        background-color: var(--light-bg);
     }
-    .header .navbar a{
+    header .navbar a{
         display: block;
         margin: 2rem;
         text-align: center;
